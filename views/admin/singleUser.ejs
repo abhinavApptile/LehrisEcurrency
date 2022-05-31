@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- start linking  -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/app.css">
+    <!-- icon -->
+    <link rel="icon" href="/img/log.png">
+    <!-- end linking -->
+    <title>Admin Panel</title>
+
+
+</head>
+
+<body>
+    <!-- start admin -->
+    <section id="admin">
+        <!-- start sidebar -->
+        <!-- start sidebar -->
+        <!-- start sidebar -->
+        <div class="sidebar">
+            <!-- start with head -->
+            <div class="head">
+                <div class="logo">
+                    <h4>Admin</h4>
+                </div>
+
+            </div>
+            <!-- end with head -->
+            <!-- start the list -->
+            <div id="list">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="/admin" class="nav-link active"><i
+                                class="fa fa-adjust"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item"><a href="/admin/orders" class="nav-link active"><i
+                                class="fa fa-adjust"></i>Orders</a>
+                    </li>
+                    <li class="nav-item"><a href="/admin/users" class="nav-link active"><i
+                                class="fa fa-adjust"></i>Users</a>
+                    </li>
+                    <!-- end user interface submenu -->
+                    <!-- start with charts -->
+
+
+                </ul>
+            </div>
+            <!-- end the list -->
+        </div>
+        <!-- start content -->
+        <div class="content">
+            <!-- start content head -->
+            <%- include("partials/header") %>
+            <!-- start Active Leads -->
+            <div class="col-lg-12">
+                <div id="leads">
+                    <div class="card">
+                        <h1 class="head">Purchase Details </h1>
+                        <table class="table">
+                            <!-- start head -->
+                            <% if(purchases.length !== 0){ %>
+                            <thead>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>Amount</th>
+                                    <th>Quantity</th>
+                                    <th>Address</th>
+                                    <th>Date</th>
+
+                                </tr>
+                            </thead>
+                            <% }else{ %>
+                            <h4>No orders found!</h4>
+                            <% } %>
+
+                            <!-- end head -->
+                            <!-- start body -->
+                            <tbody>
+                                <!-- start rows -->
+                                <% if(purchases){ %>
+                                <% purchases.forEach(function(e){ %>
+                                <tr>
+                                    <td class="text-primary"> <%= e.cart[0].currency %> </td>
+                                    <td> <%= e.cart[0].amount_text %> </td>
+                                    <td> <%=  e.cart[0].quantity %> </td>
+                                    <td> <%= e.address %>
+                                    </td>
+                                    <td> <%= e.date.toString().substring(0,25) %> </td>
+
+                                </tr>
+                                <% }) %>
+
+                                <% } %>
+
+
+                                <!-- end rows -->
+                            </tbody>
+                            <!-- end body -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- start task card -->
+            <div class="col-lg-5">
+                <div id="active">
+                    <div class="card">
+                        <p class="head">User Details</p>
+                        <div class="info">
+                            <div class="col">
+                                <h4> contact Info </h4>
+                                <p><%= customer.contact_number %></p>
+                            </div>
+                            <div class="col">
+                                <h4> Full Name </h4>
+                                <p><%= customer.first_name %> <%= customer.last_name  %></p>
+                            </div>
+                        </div>
+                        <p class="head">Access Info</p>
+                        <div class="aria">
+                            <% if(customer.access){ %>
+                            <h4 style="color: white;"> Access: <span style="color: rgb(29, 184, 163);">
+                                    <%= customer.access %></span> </h4>
+                            <a class="btn btn-danger" href="/blockUser/<%= customer.id %> ">Block access</a>
+                            <% }else{ %>
+                            <h4 style="color: white;"> Access: <span style="color: rgb(29, 184, 163);">
+                                    <%= customer.access %></span> </h4>
+                            <a class="btn btn-primary" href="/blockUser/<%= customer.id %> ">Allow access</a>
+                            <% } %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end task card -->
+            <!-- end Active Leads -->
+        </div>
+        <!-- end content -->
+    </section>
+    <!-- end admin -->
+    <!-- start screpting -->
+    <script src="/admin/js/jquery.min.js"></script>
+    <script src="/admin/js/tether.min.js"></script>
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <script src="/admin/js/highcharts.js"></script>
+    <script src="/admin/js/chart.js"></script>
+    <script src="/admin/js/app.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('input[type = "checkbox"]').click(function (e) {
+                console.log(this.attr)
+
+            });
+        }); 
+    </script>
+    <!-- end screpting -->
+</body>
+
+</html>

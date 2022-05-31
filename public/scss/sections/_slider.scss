@@ -1,0 +1,88 @@
+/*====================
+07. Slider Style CSS
+=======================*/
+.tp-caption.Button-Outline-Secondary,
+.Button-Outline-Secondary {
+  color: $white;
+  font-size: 14px;
+  line-height: 51px;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  background-color: $brandColor;
+  border-color: $brandColor;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-radius: 30px 30px 30px 30px
+}
+
+.tp-caption.Button-Outline-Secondary:hover,
+.Button-Outline-Secondary:hover {
+  color: $white;
+  text-decoration: none;
+  background-color: $brandColor;
+  border-color: $brandColor;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-radius: 30px 30px 30px 30px;
+  cursor: pointer
+}
+
+#rev_slider_11_2 .uranus.tparrows,
+#rev_slider_11_1 .uranus.tparrows {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0);
+  transform: translateY(-50%) !important;
+  left: 30px !important;
+  opacity: 0;
+  transition: 0.4s;
+
+  @media #{$sm-device} {
+    left: 5px !important;
+  }
+
+  &.tp-rightarrow {
+    left: auto !important;
+    right: 30px;
+
+    @media #{$sm-device} {
+      right: 5px;
+    }
+  }
+}
+
+#rev_slider_11_2 .uranus.tparrows:before,
+#rev_slider_11_1 .uranus.tparrows:before {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  transition: all 0.3s;
+}
+
+#rev_slider_11_2 .uranus.tparrows:hover:before,
+#rev_slider_11_1 .uranus.tparrows:hover:before {
+  opacity: 0.75
+}
+
+#slide-27-layer-7,
+#slide-28-layer-3 {
+  color: $brandColor;
+}
+
+#slide-28-layer-1,
+#slide-28-layer-2,
+#slide-29-layer-7 {
+  color: $white;
+}
+
+#rev_slider_11_2:hover .uranus.tparrows,
+#rev_slider_11_1:hover .uranus.tparrows {
+  opacity: 1;
+}
+
+#rev_slider_11_2 .rev-btn,
+#rev_slider_11_1 .rev-btn {
+  text-transform: uppercase;
+}

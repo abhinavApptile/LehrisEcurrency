@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<header style="padding-top: 0!important;" class="header-area">
+    <div style="color: white;text-align:right; background-color:#3d3838">
+        <div class="container">
+            <div style="display: inline;" class="mail-div">
+                <i class="fa fa-envelope"></i>
+                <a style="color: white;" href="mailto@support@lehrisecurrency.com">support@lehrisecurrency.com</a>
+            </div>
+            <div style="display: inline;padding-left:20px;" class="telephone-div">
+                <i class="fa fa-whatsapp"></i>
+                <a style="color: white;" href="https://api.whatsapp.com/send?phone=+91%2084479%2027970">+91
+                    8447927970</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row align-items-center">
+            <div style="padding-top: 10px;" class="col-5 col-lg-2">
+                <!-- Start Logo Area -->
+                <div class="logo-area">
+                    <a href="/"><img src="/img/service/logo.png" alt="Businex-Logo"></a>
+                </div>
+                <!-- End Logo Area -->
+            </div>
+
+            <div class="col-lg-7 d-none d-lg-block">
+                <!-- Start Navigation Area -->
+                <div class="navigation-area mt-lg-3">
+                    <ul class="main-menu nav" style="display:flex;justify-content:center">
+
+                        <li><a href="/">Home</a></li>
+                        <li class="has-submenu"><a href="/commerceUsd">Cards</a>
+                            <ul class="submenu-nav">
+                                <li><a href="/commerceInr">Astro pay cards</a></li>
+                                <li><a href="/neteller">Neteller</a></li>
+                                <li><a href="/skrill">Skrill</a></li>
+                                <li><a href="/cards/ecopayz">Ecopayz</a></li>
+                                <li><a href="/cards/muchBetter">Much better</a></li>
+                                <li><a href="/cards/bitcoins">Bitcoins</a></li>
+                                <li><a href="https://perfectmoney.com/">Perfect money</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/#serviceArea">About us</a></li>
+
+                        <li><a href="/contact">Contact</a></li>
+
+                        <li class="has-submenu"><a href="/commerceUsd">Buy</a>
+                            <ul class="submenu-nav">
+                                <li><a href="/commerceUsd">USD</a></li>
+                                <li><a href="/commerceInr">INR</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Navigation Area -->
+            </div>
+
+            <div class="col-7 col-lg-3">
+                <!-- Start Header Action Area -->
+                <div class="header-action mt-lg-3 text-right">
+                    <% if(!user){ %>
+                    <a style="padding-right: 10px;" href="/register/customer" class="tel-no"><i
+                            class="fa fa-sign-in"></i> Signup </i></a>
+                    <a href="/login/customer" class="tel-no"><i class="fa fa-unlock"></i> Login
+                    </a>
+                    <button class="btn-cog"><i class="fa fa-user"></i></button>
+                    <button class="btn-menu d-lg-none"><i class="fas fa-bars"></i></button>
+                    <% }else{ %>
+                    <div style="text-align: left;">
+                        <button class="btn-cog"><i class="fa fa-user"></i></button>
+                        <button class="btn-menu d-lg-none"><i class="fas fa-bars"></i></button>
+                    </div>
+                    <% } %>
+
+                </div>
+                <!-- End Header Action Area -->
+            </div>
+        </div>
+    </div>
+</header>

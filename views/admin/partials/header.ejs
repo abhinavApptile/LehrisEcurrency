@@ -1,0 +1,41 @@
+<!-- start content head -->
+<style>
+    .currency-value {
+        display: flex;
+        justify-content: center;
+        padding-right: 30px;
+    }
+
+    .currency-value input {
+        margin-right: 10px;
+    }
+</style>
+
+<div class="head">
+    <!-- head top -->
+    <div class="top">
+        <div class="left">
+            <button id="on" class="btn btn-info"><i class="fa fa-bars"></i></button>
+            <button id="off" class="btn btn-info hide"><i class="fa fa-align-left"></i></button>
+            <button class="btn btn-info hidden-xs-down"><i class="fa fa-expand-arrows-alt"></i></button>
+            <a href="/admin" class="btn btn-info hidden-xs-down"><i class="fa fa-home"></i>Back Home</a>
+        </div>
+        <div class="right">
+            <form action="/admin/currencyControl" class="currency-value" method="post">
+                <input type="text" name="setExchange" class="form-control"
+                    placeholder="current Exchange value: <%= configs.exchange %>  ">
+                <button type="submit" class="btn btn-primary">Set</button>
+            </form>
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" id="userDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> <%= user.first_name %> </button>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="/logout/admin">log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end head top -->
+
+</div>
+<!-- end content head -->

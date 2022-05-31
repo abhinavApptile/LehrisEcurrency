@@ -1,0 +1,176 @@
+/*==========================================
+22. Service Details Page Style CSS
+===========================================*/
+
+.service-details-thumb {
+  .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      button {
+        //border-color: $white;
+      }
+    }
+  }
+}
+
+.service-details-info {
+  margin-top: 35px;
+
+  @media #{$sm-device} {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .service-feature {
+    li {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      &:before {
+        content: '\fc2e';
+        font-family: $mdi-icon;
+        font-size: 30px;
+        line-height: 1;
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.how-we-works-content {
+  margin-top: -15px;
+
+  .icon-box-item {
+    align-items: flex-start;
+    margin-top: 40px;
+
+    .icon-box {
+      &__info {
+        width: 100%;
+        flex-basis: auto;
+      }
+    }
+  }
+}
+
+.pagination-wrap {
+  border-top: 1px solid $borderColor;
+  padding-top: 10px;
+  margin-top: 55px;
+
+  @media #{$sm-device} {
+    margin-top: 40px;
+  }
+
+  .pagination {
+
+    li {
+      &.prev{
+        margin-right: auto;
+      }
+
+      &.next{
+        margin-left: auto;
+      }
+
+      a {
+        color: $brandColor;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+// Service Details Sidebar
+.sidebar {
+  &-single {
+    background-color: $offWhite;
+    padding: 30px;
+    margin-top: 40px;
+
+    @media #{$md-device, $sm-device} {
+      margin-top: 30px;
+    }
+  }
+
+  &-heading {
+    font-size: 26px;
+    margin-bottom: 23px;
+    font-weight: 500;
+
+    @media #{$xs-device} {
+      font-size: 22px;
+    }
+  }
+}
+
+// Service List
+.service-list {
+  li {
+    border-bottom: 1px solid $borderColor;
+    padding: 13px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    a {
+      color: $paragraph;
+      font-weight: 600;
+      vertical-align: middle;
+
+      img, i {
+        margin-right: 15px;
+        vertical-align: middle;
+        font-size: 25px;
+        height: 25px;
+        width: 25px;
+      }
+
+      &:hover {
+        color: $headingColor;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+
+.service-details-wrapper{
+  .service-details-content{
+    @media #{$xl-device} {
+      padding-right: 70px;
+    }
+  }
+  .sidebar-wrap{
+    @media #{$xl-device} {
+      margin-left: -30px;
+    }
+  }
+}

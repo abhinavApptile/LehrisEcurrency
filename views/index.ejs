@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LehrisEcurrency</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700" rel="stylesheet">
+
+    <!--== All Magnific Popup CSS ==-->
+    <link href="/css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== All Animate CSS ==-->
+    <link href="/css/animate.min.css" rel="stylesheet" />
+    <!--== All FontAwesome CSS ==-->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== All Material Icons CSS ==-->
+    <link href="/css/materialdesignicons.min.css" rel="stylesheet" />
+    <!--== All Helper CSS ==-->
+    <link href="/css/helper.min.css" rel="stylesheet" />
+    <!--== All Revolution CSS ==-->
+    <link href="/css/settings.css" rel="stylesheet" />
+    <!--== All Slicknav CSS ==-->
+    <link href="/css/slicknav.min.css" rel="stylesheet" />
+    <!--== All Timeline CSS ==-->
+    <link href="/css/timeline.css" rel="stylesheet" />
+    <!--== All Slick Slider CSS ==-->
+    <link href="/css/slick.min.css" rel="stylesheet" />
+    <!--== All BootStrap CSS ==-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="/css/style.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        .brand-logo-item {
+            box-shadow: 2px 2px 5px #1f1f1f;
+            transition: transform .2s;
+            /* Animation */
+        }
+
+        .brand-logo-item:hover {
+            transform: scale(1.1);
+        }
+
+        .bg-gradient-overlay {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bg-gradient-overlay::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: #c63fa4;
+            background-image: -moz-linear-gradient(120deg, #df42b1 0%, #505add 100%);
+            background-image: -webkit-linear-gradient(120deg, #df42b1 0%, #505add 100%);
+            background-image: -ms-linear-gradient(120deg, #df42b1 0%, #505add 100%);
+            opacity: 0.9;
+        }
+
+        .captionOrange,
+        .captionBlack {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .captionOrange {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+
+        .captionBlack {
+            font-size: 16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        a.captionOrange,
+        A.captionOrange:active,
+        A.captionOrange:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a.captionOrange:hover {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+
+        .bricon {
+            background: url(../img/browser-icons.png);
+        }
+
+        /*fresh design*/
+
+        .new-card {
+            background-color: #1f1f1f;
+            width: 100%;
+            height: 270px;
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .edit-new-card {
+            background-color: #1f1f1f;
+            width: 51%;
+            height: 120px;
+            margin: auto;
+            position: relative;
+            top: 30px;
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .edit-new-card-img {
+            width: 17rem;
+            margin: auto;
+            padding: 10px 30px;
+        }
+
+        .card-value {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .inr-value {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        /*.edit-wrapper {
+            max-width: 100px;
+            
+        }*/
+
+        .new-card-img {
+            width: 20rem;
+            margin: auto;
+            padding: 10px 30px;
+
+        }
+
+        .new-btn {
+            background-color: #fff;
+            border-radius: 4px;
+            width: 75px;
+            height: 40px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+            padding-right: 2rem;
+            margin: 5px;
+        }
+
+        @media(max-width: 768px) {
+            .new-btn {
+                background-color: #fff;
+                border-radius: 4px;
+                text-align: justify-all;
+                width: 100%;
+                height: 40px;
+                font-weight: bold;
+                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+            }
+
+            .new-card {
+                background-color: #1f1f1f;
+                width: 100%;
+                height: 170px;
+                border-radius: 10px;
+                display: flex;
+                margin-bottom: 15px;
+            }
+
+            .sp-btn {
+                width: 100% !important;
+                margin-top: 20px !important;
+                font-weight: bold;
+
+            }
+
+            .r-card {
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+                border: 1px solid #dedede;
+                cursor: pointer;
+                display: flex;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+            }
+
+            #flaot-me {
+                float: right;
+            }
+
+            .add-pm {
+                position: relative;
+                top: 20px;
+            }
+
+            .d-align-me {
+                float: right;
+                margin-right: 0px !important;
+                text-decoration: underline;
+            }
+
+            .single_line {
+                width: 90% !important;
+                margin: auto;
+
+            }
+
+            #atSmall span {
+                font-size: 12px !important;
+            }
+        }
+
+        .sp-btn {
+            width: 80%;
+            margin: 5px 0;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        .edit-sp-btn {
+            width: 100%;
+            margin: 5px;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        .card-1 {
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .card-2 {
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .l-card {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            cursor: pointer;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .r-card {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            cursor: pointer;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .l-card:hover {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            cursor: pointer;
+            border: 2px solid;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .r-card:hover {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            cursor: pointer;
+            border: 2px solid;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+        }
+
+        .new-img {
+            width: 20rem;
+            margin: auto;
+            padding: 10px 20px;
+
+        }
+
+        .add-pm {
+            padding: 10px 0;
+        }
+
+        .d-align-me {
+            float: right;
+            margin-right: 65px;
+            text-decoration: underline;
+        }
+
+        @media(min-width: 1024px) {
+            #upme {
+                position: relative;
+                bottom: 200px;
+            }
+
+
+        }
+
+        .single_line {
+            width: 55vw;
+            padding: 7px 0;
+        }
+
+        .amt-btn.active {
+            background-color: black;
+            color: white;
+        }
+
+        .cur-btn.active {
+            background-color: black;
+            color: white;
+        }
+
+        .cur-btn.active:hover,
+        .cur-btn.active:active,
+        .cur-btn.active:focus {
+            background-color: black;
+            color: white;
+        }
+
+        /* @media(max-width: 1024px) and(min-width: 1300px) { */
+        .single_line {
+            width: 45vw;
+            padding: 7px 0;
+        }
+
+        /* } */
+
+        .img-more {
+            box-shadow: inset 0 4px 0px #dedede, 0 -6px 5px #98b3b3, 0 -7px 2px #1f1f1f;
+            /* transform:  */
+        }
+
+        .positionFixed {
+            background: #fff;
+            height: 100%;
+            width: 28%;
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            right: 0;
+            z-index: 9999;
+            animation: slide-left .3s ease;
+            box-shadow: -2px 3px 20px 10px #2322227a;
+        }
+
+        .orderHearder {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            padding-top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sroll-wrapper {
+            height: 60vh;
+            overflow-y: scroll;
+        }
+
+        .positionFixedLeft {
+            background-color: #1f1f1f;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: .5;
+        }
+
+        .stop-scrolling {
+            overflow: hidden;
+        }
+
+        .moveFromRight {
+            animation-name: moveInRight;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes moveInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(30rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0)
+            }
+        }
+
+        .add-to-cart {
+            animation-name: animAddToCart;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes animAddToCart {
+            0% {
+                opacity: 1;
+                transform: translate(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(50rem)
+            }
+
+        }
+
+        .come-from-top {
+            animation-name: moveInTop;
+            animation-duration: .2s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes moveInTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-10rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0)
+            }
+        }
+
+        .fa-quote-left {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        .tp-bgimg {
+            background-position:unset !important
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--== Start Header Area Wrapper ==-->
+    <%- include("partials/navbar") -%>
+    <!--== End Header Area Wrapper ==-->
+
+    <!--== Start Slider Area Wrapper ==-->
+    <div class="slider-area-wrapper">
+        <div id="rev_slider_11_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+            data-alias="business-classic" data-source="gallery">
+            <div id="rev_slider_11_1" class="rev_slider fullwidthabanner" data-version="5.4.7">
+                <ul>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-27" data-transition="random-premium" data-slotamount="default"
+                        data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+                        data-masterspeed="default" data-thumb="/img/slider/01_thumb.jpg" data-rotate="0"
+                        data-saveperformance="off" data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="/img/lehris-banner1.jpg" alt="lehris-banner"
+                             data-bgfit="cover" data-bgrepeat="no-repeat"
+                            data-bgparallax="15" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption tp-resizeme bg-gradient-overlay  slide-heading"
+                            data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
+                            data-y="['top','top','top','top']" data-voffset="['250','204','200','201']"
+                            data-fontsize="['60','60','50','30']" data-fontweight="['600']"
+                            data-lineheight="['70','70','60','40']" data-width="['650','650','600','320']"
+                            data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":10,"split":"lines","splitdelay":0.1,"speed":600,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['left']">
+                            <!-- Now you can sell, <br> buy or send money abroad -->
+                        </div>
+
+
+
+                        <!-- LAYER NR. 3 -->
+
+                    </li>
+
+                    <!-- SLIDE  -->
+                    <li data-index="rs-28" data-transition="slidingoverlayvertical,slidingoverlayleft,slideoverup"
+                        data-slotamount="default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"
+                        data-easein="default,default,default" data-easeout="default,default,default"
+                        data-masterspeed="default,default,default" data-thumb="/img/slider/02_thumb.jpg"
+                        data-rotate="0,0,0" data-saveperformance="off" data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="/img/lehris-banner2.jpg" alt="lehris-banner"
+                            data-bgfit="cover" data-bgrepeat="no-repeat"
+                            data-bgparallax="15" class="rev-slidebg" data-no-retina>
+
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption tp-resizeme slide-heading" data-x="['left','left','left','left']"
+                            data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']"
+                            data-voffset="['250','204','200','201']" data-fontsize="['60','60','50','30']"
+                            data-fontweight="['600']" data-lineheight="['70','70','60','40']"
+                            data-width="['650','650','600','320']" data-height="none" data-whitespace="normal"
+                            data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['left']">
+                            <!-- We provide transparent online solution. -->
+                        </div>
+
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']"
+                            data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']"
+                            data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']"
+                            data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']"
+                            data-height="none" data-whitespace="normal" data-visibility="['on','on','on','on']"
+                            data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
+
+                        </div>
+
+                        <!-- LAYER NR. 6 -->
+
+                    </li>
+                </ul>
+                <div class="tp-bannertimer tp-bottom"></div>
+            </div>
+        </div>
+    </div>
+    <!--== End Slider Area Wrapper ==-->
+
+    <!--== Start About Area Wrapper ==-->
+    <div class="about-area-wrapper sm-top">
+        <div class="container">
+            <div class="row align-items-lg-center">
+
+
+                <div class="col-md-12 col-lg-12">
+                    <div class="about-content">
+                        <h6>ABOUT US</h6>
+                        <h2>Skrill Provider in Delhi</h2>
+                        <span class="about-since">Since 2010</span>
+                        <p class=" wow fadeInUp">Being an E currency exchanger in India; LehrisEcurrency tends to buy,
+                            sell, and exchange
+                            services of digital currency
+                            like ( Skrill , Neteller , Entropay, Paytm Neteller) etc.
+                            <a class="btn" data-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Read More..
+                            </a>
+                        <div class="collapse" id="collapseExample">
+                            We are proud to let you know that LehrisEcurrency is formally certified by Payu Money.
+                            <br> <br> It has been years that we have worked persistently to build a reputation in being
+                            the
+                            fastest, reliable, and safer to
+                            deal with. We are managed by a team of extremely professional with more than 10 years of
+                            experience. LehrisEcurrency is
+                            among the pioneer e-currency exchanges that can easily support Neteller Exchanger in India
+                            to Paytm transfer in India. <br> <br> LehrsEcurrency also takes a stronghold on withdrawal
+                            with
+                            the Paytm and UPI payment system to local bank accounts in
+                            India. We, at LehrisEcurrency also provide an ample amount of support through email &
+                            WhatsApp with an instant reply to
+                            the customer.
+                        </div>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End About Area Wrapper ==-->
+
+    <!--== Start Feature Area Wrapper ==-->
+    <div class="feature-area-wrapper sm-top">
+        <div class="container">
+            <div class="row mtn-sm-60 mtn-md-5">
+                <div class="col-md-4">
+                    <div class="icon-box-item wow fadeInUp">
+                        <div class="icon-box__icon">
+                            <img src="/img/feature/01.png" alt="Businex-Feature" />
+                        </div>
+                        <div class="icon-box__info">
+                            <h5>Creative Team</h5>
+                            <p>We have creative team, they always ready to help you. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icon-box-item wow fadeInUp">
+                        <div class="icon-box__icon">
+                            <img src="/img/feature/02.png" alt="Businex-Feature" />
+                        </div>
+                        <div class="icon-box__info">
+                            <h5>Best Service</h5>
+                            <p>We have creative team, they always ready to help you. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icon-box-item wow fadeInUp">
+                        <div class="icon-box__icon">
+                            <img src="/img/feature/03.png" alt="Businex-Feature" />
+                        </div>
+                        <div class="icon-box__info">
+                            <h5>Online Support</h5>
+                            <p>We have creative team, they always ready to help you. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Feature Area Wrapper ==-->
+
+    <!--== Start Service Area Wrapper ==-->
+    <div id="serviceArea" class="service-area-wrapper sm-top-wt">
+        <div class="service-area-top parallax" data-parallax-speed="0.75"
+            data-bg="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_960_720.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5 m-auto text-center">
+                        <div class="section-title section-title--light">
+                            <h6 class="wow fadeInUp">OUR SERVICES</h6>
+                            <h2 class="mb-0 wow fadeInUp">We make it simple, providing best solutions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-content-area">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-sm-6 col-lg-6">
+                        <!-- Start Service Item -->
+                        <div class="service-item">
+                            <a href="/commerceInr" class="service-thumb">
+
+
+
+                                <div class="new-card wow fadeInUp">
+                                    <img class="new-card-img" src="/img/astropay-logo-white.svg" alt="svg">
+                                    <h3 style="color: white; position: absolute; right: 10%; top: 5%"><small
+                                            style="color: white; text-transform: uppercase; display: none;"
+                                            id="currency">INR&nbsp;</small><span id="amt">INR</span></h3>
+                                </div>
+
+
+
+                                <figcaption class="service-txt">
+                                    <h5>Buy INR</h5>
+                                </figcaption>
+                            </a>
+
+                        </div>
+                        <!-- End Service Item -->
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-lg-6">
+                        <!-- Start Service Item -->
+                        <div class="service-item">
+                            <a href="/commerceUsd" class="service-thumb">
+
+
+
+                                <div class="new-card wow fadeInUp">
+                                    <img class="new-card-img" src="/img/astropay-logo-white.svg" alt="svg">
+                                    <h3 style="color: white; position: absolute; right: 10%; top: 5%"><small
+                                            style="color: white; text-transform: uppercase; display: none;"
+                                            id="currency">INR&nbsp;</small><span id="amt">USD</span></h3>
+                                </div>
+
+
+
+                                <figcaption class="service-txt">
+                                    <h5>Buy USD</h5>
+                                </figcaption>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Service Area Wrapper ==-->
+
+    <!--== Start Testimonial Area Wrapper ==-->
+    <div class="testimonial-area bg-offwhite sp-y sm-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title mb-0">
+                        <h6 style="color: red;" class="wow fadeInUp">TESTIMONIALS</h6>
+                        <h2 class="wow fadeInUp">Our Customer <br>Loves What we do</h2>
+
+                    </div>
+
+                    <div class="testimonial-carousel-dots"></div>
+                </div>
+
+                <div class="col-lg-6 ml-auto">
+                    <div class="testimonial-content-wrap">
+                        <div class="testimonial-content">
+                            <!-- Start Testimonial Item -->
+                            <div class="testimonial-item">
+
+
+                                <div class="testimonial-txt">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>I can't believe the difference between the cost of foreign currency from the
+                                        banks and from lehrisecurrency.com. They
+                                        provide a real saving as well as a professional service which was more than
+                                        expected. They have saved me and my business
+                                        money and time, again and again.</p>
+                                    <h5 class="client-name">Rahul Sharma</h5>
+                                </div>
+                            </div>
+                            <!-- End Testimonial Item -->
+
+                            <!-- Start Testimonial Item -->
+                            <div class="testimonial-item">
+
+
+                                <div class="testimonial-txt">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>I have used lehrisecurrency.com on several occasions for foreign exchange
+                                        services and wire transfers, All I can say is
+                                        they are courteous, professional and stress free and the exchange rate has
+                                        always been very good. I will continue to
+                                        recommend lehrisecurrency to my business associates and look forward to doing
+                                        business with them in the future.
+                                    </p>
+                                    <h5 class="client-name">Renu Khatri</h5>
+                                </div>
+                            </div>
+                            <!-- End Testimonial Item -->
+
+                            <!-- Start Testimonial Item -->
+                            <div class="testimonial-item">
+
+
+                                <div class="testimonial-txt">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>I have used lehrisecurrency.com on several occasions for foreign exchange
+                                        services and wire transfers, All I can say is
+                                        they are courteous, professional and stress free and the exchange rate has
+                                        always been very good. I will continue to
+                                        recommend lehrisecurrency to my business associates and look forward to doing
+                                        business with them in the future.
+                                    </p>
+                                    <h5 class="client-name">Rohit Khanna</h5>
+                                </div>
+
+                            </div>
+                            <!-- End Testimonial Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Testimonial Area Wrapper ==-->
+
+
+
+
+    <!--== Start Brand Logo Area Wrapper ==-->
+    <div id="partners" class="brand-logo-area sm-top">
+        <div class="container">
+            <h3 style="text-align: center; padding-bottom:40px; font-weight:bold">Other services</h3>
+            <div style="text-align: center;" class="row">
+
+
+
+                <div class="wow fadeInUp brand-logo-item col-lg-6">
+                    <a href="/neteller"><img style="width: 50%;" src="/img/service/Neteller.png"
+                            alt="Businex-Logo" /></a>
+                </div>
+
+                <div class="brand-logo-item wow fadeInUp col-lg-6">
+                    <a href="/skrill"><img style="width: 50%;" src="/img/service/Skrill.png" alt="Businex-Logo" /></a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--== End Brand Logo Area Wrapper ==-->
+
+    <!--== Start Fun Fact Area Wrapper ==-->
+    <div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70"
+        data-bg="https://images.unsplash.com/photo-1514820720301-4c4790309f46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80">
+        <div class="container">
+            <div class="row mtn-40">
+                <div class="col-6 col-md-3 text-center">
+                    <div class="counter-item">
+
+                        <h2 class="counter-number"><span class="counter">2654</span></h2>
+
+                        <h6 class="counter-txt"><i style="padding-right:10px" class="fa fa-users"></i>Happy Clients</h6>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="counter-item">
+                        <h2 class="counter-number"><span class="counter">1520</span></h2>
+                        <h6 class="counter-txt"> <i class="fa fa-check-circle"></i> Project Done</h6>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="counter-item">
+                        <h2 class="counter-number"><span class="counter">120</span></h2>
+                        <h6 class="counter-txt"> <i class="fa fa-trophy"></i> Awards Win</h6>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="counter-item">
+                        <h2 class="counter-number"><span class="counter">3580</span></h2>
+                        <h6 class="counter-txt"><i class="fa fa-coffee"></i> Cups Coffee</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Fun Fact Area Wrapper ==-->
+
+    <%- include("partials/footer",{user:user}) -%>
+    <!--== End Footer Area Wrapper ==-->
+
+    <!--=======================Javascript============================-->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/plugins/bootstrap.min.js"></script>
+    <script src="/js/plugins/waypoint.min.js"></script>
+    <script src="/js/plugins/counterup.min.js"></script>
+    <script src="/js/plugins/instafeed.min.js"></script>
+    <script src="/js/plugins/jquery.appear.js"></script>
+    <script src="/js/plugins/jquery.slicknav.min.js"></script>
+    <script src="/js/plugins/parallax.min.js"></script>
+    <script src="/js/plugins/slick.min.js"></script>
+    <script src="/js/plugins/magnific-popup.min.js"></script>
+
+    <script>
+        let login_form = $("#login_form");
+        let register_form = $("#register_form");
+        $("#register_click").click(function () {
+
+            login_form.hide();
+            register_form.show()
+        });
+        $("#get_login").click(function () {
+
+            register_form.hide();
+            login_form.show()
+        })
+    </script>
+    <!--=== Active Js ===-->
+    <script src="/js/active.min.js"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="/js/revslider/jquery.themepunch.tools.min.js"></script>
+    <script src="/js/revslider/jquery.themepunch.revolution.min.js"></script>
+
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="/js/revslider/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.video.min.js"></script>
+
+    <!--=== REVOLUTION JS ===-->
+    <script src="/js/revslider/rev-active.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

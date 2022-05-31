@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700" rel="stylesheet">
+
+    <!--== All Magnific Popup CSS ==-->
+    <link href="/css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== All Animate CSS ==-->
+    <link href="/css/animate.min.css" rel="stylesheet" />
+    <!--== All FontAwesome CSS ==-->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== All Material Icons CSS ==-->
+    <link href="/css/materialdesignicons.min.css" rel="stylesheet" />
+    <!--== All Helper CSS ==-->
+    <link href="/css/helper.min.css" rel="stylesheet" />
+    <!--== All Revolution CSS ==-->
+    <link href="/css/settings.css" rel="stylesheet" />
+    <!--== All Slicknav CSS ==-->
+    <link href="/css/slicknav.min.css" rel="stylesheet" />
+    <!--== All Timeline CSS ==-->
+    <link href="/css/timeline.css" rel="stylesheet" />
+    <!--== All Slick Slider CSS ==-->
+    <link href="/css/slick.min.css" rel="stylesheet" />
+    <!--== All BootStrap CSS ==-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="/css/style.min.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+    <!--== Start Header Area Wrapper ==-->
+    <%- include("partials/navbar") -%>
+    <% if(passed && passed !== "Password change successfull!! Please login with the new password!"){ %>
+    <div class="alert alert-danger alert-dismissible fade show container" role="alert">
+        <strong>Oops!</strong> <%= passed %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% }else if(passed){ %>
+    <div class="alert alert-success alert-dismissible fade show container" role="alert">
+        <strong>Success!</strong> <%= passed %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% } %>
+
+
+    <!--== Start Contact Page Area Wrapper ==-->
+    <div class="contact-page-area-wrapper sp-y">
+        <div class="container">
+            <div class="contact-content-wrap">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="contact-form-area contact-method">
+                            <h3>Login</h3>
+
+                            <div class="contact-form-wrap">
+                                <form action="/login/customer" method="post" id="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="single-input-item">
+                                                <label>
+                                                    <input type="email" name="username" placeholder="Email *"
+                                                        required />
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="single-input-item">
+                                                <label>
+                                                    <input type="password" name="password" placeholder="Password *"
+                                                        required />
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12">
+
+
+                                            <div class="row">
+                                                <div class="single-input-item mb-0 mt-40 col-lg-6">
+                                                    <button type="submit" class="btn-outline">Login</button>
+                                                </div>
+                                                <div class="single-input-item mb-0 mt-40 col-lg-6">
+                                                    <a href="/register/customer" class="btn-outline">Register</a>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            <a href="/getEmail">Forgot password?</a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="contact-information contact-method">
+                            <div class="contact-info-con">
+                                <h3>Contact Info</h3>
+
+                                <div class="widget-item m-0">
+                                    <address>
+                                        Karol Bagh, Okhla and Rohini
+                                        <br>
+                                        support@lehrisecurrency.com
+                                        <br>
+                                        +91 8447927970
+                                    </address>
+                                </div>
+                                <div class="member-social-icons mt-30">
+                                    <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                    <a href="#"><i class="mdi mdi-twitter"></i></a>
+                                    <a href="#"><i class="mdi mdi-linkedin"></i></a>
+                                    <a href="#"><i class="mdi mdi-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Contact Page Area Wrapper ==-->
+
+
+
+
+    <!--=======================Javascript============================-->
+
+    <!--=== REVOLUTION JS ===-->
+    <script src="/js/revslider/rev-active.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--=== Active Js ===-->
+    <%- include("partials/footer",{user:user}) -%>
+    <!--== End Footer Area Wrapper ==-->
+    <script src="/js/active.min.js"></script>
+    <script>
+        let login_form = $("#login_form");
+        let register_form = $("#register_form");
+        $("#register_click").click(function () {
+
+            login_form.hide();
+            register_form.show()
+        });
+        $("#get_login").click(function () {
+
+            register_form.hide();
+            login_form.show()
+        })
+    </script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="/js/revslider/jquery.themepunch.tools.min.js"></script>
+    <script src="/js/revslider/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="/js/revslider/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.video.min.js"></script>
+</body>
+
+</html>

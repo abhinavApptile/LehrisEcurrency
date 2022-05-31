@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700" rel="stylesheet">
+
+    <!--== All Magnific Popup CSS ==-->
+    <link href="/css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== All Animate CSS ==-->
+    <link href="/css/animate.min.css" rel="stylesheet" />
+    <!--== All FontAwesome CSS ==-->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Agooglell Material Icons CSS ==-->
+    <link href="/css/materialdesignicons.min.css" rel="stylesheet" />
+    <!--== All Helper CSS ==-->
+    <link href="/css/helper.min.css" rel="stylesheet" />
+    <!--== All Revolution CSS ==-->
+    <link href="/css/settings.css" rel="stylesheet" />
+    <!--== All Slicknav CSS ==-->
+    <link href="/css/slicknav.min.css" rel="stylesheet" />
+    <!--== All Timeline CSS ==-->
+    <link href="/css/timeline.css" rel="stylesheet" />
+    <!--== All Slick Slider CSS ==-->
+    <link href="/css/slick.min.css" rel="stylesheet" />
+    <!--== All BootStrap CSS ==-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="/css/style.min.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+    <!--== Start Header Area Wrapper ==-->
+    <%- include("partials/navbar") -%>
+    <!--== End Header Area Wrapper ==-->
+
+    <!--== Start Page Header Area ==-->
+    <div class="page-header-area bg-img service-area-top wow"
+        data-bg="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/job12-110-chim-00028.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=c1b3b1c614d4cf8bf8e596920c8aa6fc">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 m-auto text-center">
+                    <div class="page-header-content-inner">
+                        <div style="color: black;" class="page-header-content">
+                            <h2 class="wow fadeIn" style="color: black;">About US</h2>
+                            <h4>We provide the best ecurrency solutions.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End Page Header Area ==-->
+    <!--== Start About Area Wrapper ==-->
+    <div class="about-area-wrapper sm-top">
+        <div class="container">
+            <div class="row align-items-lg-center">
+
+                <div class="col-md-6 col-lg-5 order-0 order-md-1 wow fadeInUp">
+                    <figure class="about-thumb">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/11/08/02/usa-1249880_960_720.jpg"
+                            alt="Businex-About">
+                    </figure>
+                </div>
+
+                <div class="col-md-12 col-lg-7">
+                    <div class="about-content">
+
+                        <h2 class="wow fadeInUp">Skrill Provider in Delhi</h2>
+                        <span class="about-since">Since 2010</span>
+                        <p style="font-size: large; margin-bottom:40px">Being an E currency exchanger in India;
+                            LehrisEcurrency tends to
+                            buy, sell, and exchange
+                            services of digital currency
+                            like ( Skrill , Neteller , Entropay, Paytm Neteller) etc.
+
+                            We are proud to let you know that LehrisEcurrency is formally certified by Payu Money.
+                            <br> <br> It has been years that we have worked persistently to build a reputation in being
+                            the
+                            fastest, reliable, and safer to
+                            deal with. We are managed by a team of extremely professional with more than 10 years of
+                            experience. LehrisEcurrency is
+                            among the pioneer e-currency exchanges that can easily support Neteller Exchanger in India
+                            to Paytm transfer in India. <br> <br> LehrsEcurrency also takes a stronghold on withdrawal
+                            with
+                            the Paytm and UPI payment system to local bank accounts in
+                            India. We, at LehrisEcurrency also provide an ample amount of support through email &
+                            WhatsApp with an instant reply to
+                            the customer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End About Area Wrapper ==-->
+
+    <%- include("partials/footer") -%>
+    <!--== End Footer Area Wrapper ==-->
+
+    <!-- Scroll Top Button -->
+    <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
+
+
+    <!-- Start Off Canvas Menu Wrapper -->
+    <!-- Scroll Top Button -->
+    <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
+
+
+    <!-- Start Off Canvas Menu Wrapper -->
+    <aside class="off-canvas-wrapper off-canvas-cog">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner">
+            <div class="close-btn">
+                <button class="btn-close"><i class="mdi mdi-close"></i></button>
+            </div>
+
+            <!-- Start Off Canvas Content -->
+            <div class="off-canvas-content mb-sm-30">
+                <div class="off-canvas-item">
+                    <% if(user){ %>
+                    <div class="log-in-content-wrap">
+                        <h2>USER</h2>
+                        <p><span style="font-weight: bold;">Email:</span> <%= user.username %> </p>
+                        <p> <span style="font-weight: bold;">Contact number:</span> <%= user.contact_number %> </p>
+                        <div class="form-input-item">
+                            <a href="/commerce" class="btn-submit"> BUY </a>
+                        </div>
+                        <div class="form-input-item">
+                            <a href="/logout" class="btn-submit"> LOGOUT </a>
+                        </div>
+                    </div>
+                    <% }else{ %>
+                    <div id="login_form" class="log-in-content-wrap">
+                        <h2>Login</h2>
+                        <div class="login-form mtn-15">
+                            <form action="/login/customer" method="post">
+                                <div class="form-input-item">
+                                    <label for="username" class="sr-only">Email</label>
+                                    <input type="text" name="username" id="username" placeholder="email" required>
+                                </div>
+
+                                <div class="form-input-item">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password" name="password" id="password" placeholder="Password"
+                                        required>
+                                </div>
+
+                                <div class="form-input-item">
+                                    <button type="submit" class="btn-submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="sign-up-notification">
+                            <p>Not Resisted? <a id="register_click" style="cursor: pointer;">Create Account Now.</a></p>
+                        </div>
+                    </div>
+                    <div style="display: none;" id="register_form" class="log-in-content-wrap">
+                        <h2>Register</h2>
+                        <div class="login-form mtn-15">
+                            <form action="/register/customer" method="post">
+                                <div class="form-input-item">
+                                    <label for="first_name" class="sr-only">First name</label>
+                                    <input required type="text" id="first_name" name="first_namae"
+                                        placeholder="First name">
+                                </div>
+                                <div class="form-input-item">
+                                    <label for="last_name" class="sr-only">Last name</label>
+                                    <input required type="text" id="last_name" name="last_name" placeholder="Last name">
+                                </div>
+                                <div class="form-input-item">
+                                    <label for="reg_username" class="sr-only">Email</label>
+                                    <input required type="email" id="reg_username" name="username" placeholder="Email">
+                                </div>
+
+                                <div class="form-input-item">
+                                    <label for="contact_number" class="sr-only">Contact number</label>
+                                    <input required type="number" id="contact_number" placeholder="contact number"
+                                        name="contact_number">
+                                </div>
+                                <div class="form-input-item">
+                                    <label for="reg_password" class="sr-only">Password</label>
+                                    <input required type="password" id="reg_password" name="password"
+                                        placeholder="password">
+                                </div>
+                                <div class="form-input-item">
+                                    <label for="re_password" class="sr-only">Password</label>
+                                    <input required type="password" id="re_password" name="re_password"
+                                        placeholder="Retype password">
+                                </div>
+
+                                <div class="form-input-item">
+                                    <button type="submit" class="btn-submit">Register</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="sign-up-notification">
+                            <p>Already Resisted? <a style="cursor: pointer;" id="get_login">Login Now.</a></p>
+                        </div>
+                    </div>
+
+                    <% } %>
+                </div>
+
+                <div class="off-canvas-item mt-sm-30">
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                    <div class="copyright-content">
+                        <p> © Businex 2019. All Right Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- End Off Canvas Menu Wrapper -->
+
+    <!-- Start Off Canvas Menu Wrapper -->
+    <aside class="off-canvas-wrapper off-canvas-menu">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner">
+            <!-- Start Off Canvas Header -->
+            <div class="close-btn">
+                <button class="btn-close"><i class="mdi mdi-close"></i></button>
+            </div>
+
+            <!-- Start Off Canvas Content -->
+            <div class="off-canvas-content">
+                <div class="res-mobile-menu">
+
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- End Off Canvas Menu Wrapper -->
+    <!--=======================Javascript============================-->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/plugins/bootstrap.min.js"></script>
+    <script src="/js/plugins/waypoint.min.js"></script>
+    <script src="/js/plugins/counterup.min.js"></script>
+    <script src="/js/plugins/instafeed.min.js"></script>
+    <script src="/js/plugins/jquery.appear.js"></script>
+    <script src="/js/plugins/jquery.slicknav.min.js"></script>
+    <script src="/js/plugins/parallax.min.js"></script>
+    <script src="/js/plugins/slick.min.js"></script>
+    <script src="/js/plugins/magnific-popup.min.js"></script>
+
+    <!--=== Active Js ===-->
+    <script src="/js/active.min.js"></script>
+    <script>
+        let login_form = $("#login_form");
+        let register_form = $("#register_form");
+        $("#register_click").click(function () {
+
+            login_form.hide();
+            register_form.show()
+        });
+        $("#get_login").click(function () {
+
+            register_form.hide();
+            login_form.show()
+        })
+    </script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="/js/revslider/jquery.themepunch.tools.min.js"></script>
+    <script src="/js/revslider/jquery.themepunch.revolution.min.js"></script>
+
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="/js/revslider/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/js/revslider/extensions/revolution.extension.video.min.js"></script>
+
+    <!--=== REVOLUTION JS ===-->
+    <script src="/js/revslider/rev-active.js"></script>
+
+</body>
+
+</html>
