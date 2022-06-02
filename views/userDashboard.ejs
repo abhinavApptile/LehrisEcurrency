@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>User Dashboard</title>
@@ -12,7 +11,10 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 
     <!--== Google Fonts ==-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700"
+      rel="stylesheet"
+    />
 
     <!--== All Magnific Popup CSS ==-->
     <link href="/css/magnific-popup.min.css" rel="stylesheet" />
@@ -38,107 +40,110 @@
     <link href="/css/style.min.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
-<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <style>
-        .btn {
-            border-radius: 0;
-            background-color: #080B1A;
-        }
+      .btn {
+        border-radius: 0;
+        background-color: #080b1a;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!--== Start Header Area Wrapper ==-->
     <%- include("partials/navbar") -%>
     <!--== End Header Area Wrapper ==-->
 
     <% if(passedVariable === "Purchase Successful!"){ %>
-    <div class="alert alert-success alert-dismissible fade show container" role="alert">
-        <strong>Congratulations!</strong> <%= passedVariable %>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div
+      class="alert alert-success alert-dismissible fade show container"
+      role="alert"
+    >
+      <strong>Congratulations!</strong> <%= passedVariable %>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     <% }else if(passedVariable === "Payment Uncessfull!"){ %>
-    <div class="alert alert-danger alert-dismissible fade show container" role="alert">
-        <strong>Oops!</strong> <%= passedVariable %>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div
+      class="alert alert-danger alert-dismissible fade show container"
+      role="alert"
+    >
+      <strong>Oops!</strong> <%= passedVariable %>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     <% } %>
 
     <!--== Start Contact Page Area Wrapper ==-->
     <div class="contact-page-area-wrapper sp-y">
-        <div class="container">
-            <div class="contact-content-wrap">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="contact-form-area contact-method">
-                            <h3>Purchases</h3>
-                            <% if(data){ %>
-                            <% data.forEach( function(element){ %>
-                            <div class="card" style="margin-bottom: 30px;border-radius: 0;">
-                                <div class="card-header">
-                                    <%= element.date.toString().substring(0,16) %>
-                                </div>
-                                <div class="card-body">
-                                    <% element.cart.forEach(function(item){ %>
-                                    <%= item.amount_text %>|
-                                    <% }) %>
-                                </div>
-                            </div>
-                            <% }) %>
-
-                            <% }else{ %>
-                            <h1>Sorry! No data to show</h1>
-                            <% } %>
-                            <a href="/" class="btn btn-primary">Go Home</a>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-information contact-method">
-                            <div class="contact-info-con">
-                                <h3>Contact Info</h3>
-
-                                <div class="widget-item m-0">
-                                    <address>
-                                        Karol Bagh, Okhla and Rohini
-                                        <br>
-                                        support@lehrisecurrency.com
-                                        <br>
-                                        +91 8447927970
-                                    </address>
-                                </div>
-                                <div class="member-social-icons mt-30">
-                                    <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                    <a href="#"><i class="mdi mdi-twitter"></i></a>
-                                    <a href="#"><i class="mdi mdi-linkedin"></i></a>
-                                    <a href="#"><i class="mdi mdi-pinterest"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="contact-content-wrap">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="contact-form-area contact-method">
+                <h3>Purchases</h3>
+                <% if(data){ %> <% data.forEach( function(element){ %>
+                <div class="card" style="margin-bottom: 30px; border-radius: 0">
+                  <div class="card-header">
+                    <%= element.date.toString().substring(0,16) %>
+                  </div>
+                  <div class="card-body">
+                    <% element.cart.forEach(function(item){ %> <%=
+                    item.amount_text %>| <% }) %>
+                  </div>
                 </div>
+                <% }) %> <% }else{ %>
+                <h1>Sorry! No data to show</h1>
+                <% } %>
+                <a href="/" class="btn btn-primary">Go Home</a>
+              </div>
             </div>
+            <div class="col-lg-4">
+              <div class="contact-information contact-method">
+                <div class="contact-info-con">
+                  <h3>Contact Info</h3>
+
+                  <div class="widget-item m-0">
+                    <address>
+                      Karol Bagh, Okhla and Rohini <br />Al Maktoum Rd - Deira -
+                      Riggat Al Buteen - Dubai - United Arab Emirates
+                      <br />
+                      support@lehrisecurrency.com
+                      <br />
+                      +971544212686
+                    </address>
+                  </div>
+                  <div class="member-social-icons mt-30">
+                    <a href="#"><i class="mdi mdi-facebook"></i></a>
+                    <a href="#"><i class="mdi mdi-twitter"></i></a>
+                    <a href="#"><i class="mdi mdi-linkedin"></i></a>
+                    <a href="#"><i class="mdi mdi-pinterest"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!--== End Contact Page Area Wrapper ==-->
 
     <%- include("partials/footer",{user:user}) -%>
     <!--== End Footer Area Wrapper ==-->
-
-
-
-
-
-
-
-
 
     <!--=======================Javascript============================-->
     <script src="/js/modernizr-3.6.0.min.js"></script>
@@ -158,23 +163,20 @@
     <!--=== Active Js ===-->
     <script src="/js/active.min.js"></script>
     <script>
-        let login_form = $("#login_form");
-        let register_form = $("#register_form");
-        $("#register_click").click(function () {
-
-            login_form.hide();
-            register_form.show()
-        });
-        $("#get_login").click(function () {
-
-            register_form.hide();
-            login_form.show()
-        })
+      let login_form = $("#login_form");
+      let register_form = $("#register_form");
+      $("#register_click").click(function () {
+        login_form.hide();
+        register_form.show();
+      });
+      $("#get_login").click(function () {
+        register_form.hide();
+        login_form.show();
+      });
     </script>
     <!-- REVOLUTION JS FILES -->
     <script src="/js/revslider/jquery.themepunch.tools.min.js"></script>
     <script src="/js/revslider/jquery.themepunch.revolution.min.js"></script>
-
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
     <script src="/js/revslider/extensions/revolution.extension.actions.min.js"></script>
@@ -189,7 +191,5 @@
 
     <!--=== REVOLUTION JS ===-->
     <script src="/js/revslider/rev-active.js"></script>
-
-</body>
-
+  </body>
 </html>
